@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Video Not Found</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: #0a0a0a;
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            z-index: 2;
+        }
+        h1 {
+            font-size: clamp(80px, 20vw, 180px);
+            font-weight: 700;
+            line-height: 0.9;
+            letter-spacing: -5px;
+        }
+        h1 span { color: #ff2a6d; }
+        .glitch {
+            position: relative;
+            animation: glitch 1s infinite;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 0.05em 0 0 #ff2a6d, -0.05em -0.025em 0 #05d9e8; }
+            15% { text-shadow: -0.05em -0.025em 0 #ff2a6d, 0.025em 0.025em 0 #05d9e8; }
+            50% { text-shadow: 0.025em 0.05em 0 #ff2a6d, 0.05em 0 0 #05d9e8; }
+            100% { text-shadow: -0.05em 0 0 #ff2a6d, -0.05em -0.025em 0 #05d9e8; }
+        }
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #888;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 14px 32px;
+            background: white;
+            color: black;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 100px;
+            transition: all 0.2s ease;
+        }
+        .btn:hover {
+            background: #ff2a6d;
+            color: white;
+            transform: scale(1.05);
+        }
+        .bg-video-text {
+            position: absolute;
+            font-size: 30vw;
+            font-weight: 700;
+            color: rgba(255,255,255,0.02);
+            white-space: nowrap;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-video-text">VIDEO</div>
+    <div class="container">
+        <h1 class="glitch">4<span>0</span>4</h1>
+        <p>Oops! This video link is broken or has been removed. Let's get you back to the show.</p>
+        <a href="/" class="btn">BACK TO HOME →</a>
+    </div>
+
+    <script>
+        // Auto redirect to homepage if user is on github.io project page
+        // Ganti "/" jadi "/nama-repo-kamu/" kalau pakai project page
+        console.log("404 - Page not found");
+    </script>
+</body>
+</html>
